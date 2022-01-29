@@ -1,2 +1,2 @@
 # github_workflow
-test github workflow
+test github workflow and workflow_run
