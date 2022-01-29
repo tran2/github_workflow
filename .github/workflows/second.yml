@@ -27,7 +27,7 @@ jobs:
         uses: lewagon/wait-on-check-action@v1.0.0
         with:
           ref: ${{ github.event.pull_request.head.sha }}
-          check-name: 'CI'
+          check-name: 'build'
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           wait-interval: 30
           allowed-conclusions: success
@@ -35,9 +35,6 @@ jobs:
       - uses: hmarr/debug-action@v2
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.workout_run.head_sha }}
-
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world 2!
